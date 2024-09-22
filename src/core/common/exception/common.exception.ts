@@ -1,5 +1,3 @@
-import { ExceptionCode } from "./exception-code";
-
 export abstract class CommonException extends Error {
   private code: string;
   private statusCode: number;

@@ -1,4 +1,4 @@
-import { Uuid } from "../../../common/class/uuid";
+import { Uuid } from '../../../common/class/uuid';
 
 interface Target {
   postId: Uuid;
@@ -7,8 +7,8 @@ interface Target {
 interface Options {}
 
 export abstract class FindPostDto {
-  target: Target;
-  options: Options;
+  target!: Target;
+  options!: Options;
 
   private constructor() {}
 

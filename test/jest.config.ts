@@ -1,9 +1,9 @@
-import type { Config } from "jest";
+import type { Config } from 'jest';
 
 const config: Config = {
   verbose: true,
   transform: {
-    "^.+\\.(t|j)sx?$": "@swc/jest",
+    '^.+\\.(t|j)sx?$': '@swc/jest',
   },
   rootDir: process.cwd(),
 };
