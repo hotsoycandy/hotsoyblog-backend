@@ -1,6 +1,6 @@
-import { PostRepo } from './post.repo';
+import { PostRepo } from '../post.repo';
 
-export class PostRepoMock extends PostRepo {
+export class MockedPostRepo extends PostRepo {
   insert: jest.MockedFunction<PostRepo['insert']> = jest.fn();
   find: jest.MockedFunction<PostRepo['find']> = jest.fn();
   findOne: jest.MockedFunction<PostRepo['findOne']> = jest.fn();

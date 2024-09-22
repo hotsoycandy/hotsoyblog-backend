@@ -1,15 +1,15 @@
 import { Test } from '@nestjs/testing';
-import { PostRepoMock } from '../../persistence/post.repo.mock';
 import { ViewPostUseCase } from './view-post.use-case';
 import { Post } from '../../domain/post.entity';
 import { Uuid } from '../../../common/class/uuid';
+import { MockedPostRepo } from '../../persistence/mock/post.repo.mock';
 
 describe('게시글 조회 UseCase 테스트', () => {
   let viewPostService: ViewPostUseCase;
-  let postRepo: PostRepoMock;
+  let postRepo: MockedPostRepo;
 
   beforeEach(async () => {
-    postRepo = new PostRepoMock();
+    postRepo = new MockedPostRepo();
 
     const moduleRef = await Test.createTestingModule({
       controllers: [],
