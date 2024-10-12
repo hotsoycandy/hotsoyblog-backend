@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { PostRepo } from '../post.repo';
-import { Post } from '../../domain/post.entity';
 
 @Injectable()
 export class MockedPostRepo extends PostRepo {
@@ -29,6 +28,4 @@ export class MockedPostRepo extends PostRepo {
   isDeleteCalled(): boolean {
     return this.insert.mock.calls.length > 0;
   }
-
-  public createdPost?: Post;
 }

@@ -1,7 +1,7 @@
 export abstract class CommonException extends Error {
-  private code: string;
-  private statusCode: number;
-  private clientMessage: string;
+  public code: string;
+  public statusCode: number;
+  public clientMessage: string;
 
   constructor(params: {
     code: string;

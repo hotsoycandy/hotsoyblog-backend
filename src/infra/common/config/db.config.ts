@@ -1,7 +1,7 @@
-import { registerAs } from '@nestjs/config';
-import { IsNumber, IsString } from 'class-validator';
 import configValidator from './config.validator';
+import { registerAs } from '@nestjs/config';
 import { Expose, Type } from 'class-transformer';
+import { IsNumber, IsString } from 'class-validator';
 
 export class DbConfig {
   @IsString()

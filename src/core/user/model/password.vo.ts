@@ -1,7 +1,8 @@
-import crypto from 'crypto';
-
 export class Password {
   private readonly _password;
+
+  static pattern: RegExp =
+    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,24}$/;
 
   constructor(password: string, salt: string = '') {
     this._password = password;
@@ -10,7 +11,4 @@ export class Password {
   private static encrypt(password: string): string {
     return '';
   }
-
-  static pattern =
-    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,24}$/;
 }
