@@ -1,7 +1,7 @@
 import { describe, expect, test } from '@jest/globals';
 import { Uuid } from './uuid';
 
-describe.skip('Uuid 테스트', () => {
+describe('Uuid 테스트', () => {
   test('생성하는 아이디는 32자인가?', () => {
     const uuid = new Uuid();
     expect(`${uuid}`).toBe(32);

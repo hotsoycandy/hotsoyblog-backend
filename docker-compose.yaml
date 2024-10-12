@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql:9
+    environment:
+      MYSQL_DATABASE: blog
+      MYSQL_USER: user
+      MYSQL_PASSWORD: asd123!
+      MYSQL_ROOT_PASSWORD: asd123!
+    ports:
+      - '3306:3306'

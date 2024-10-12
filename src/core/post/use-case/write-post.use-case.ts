@@ -1,7 +1,9 @@
-import { Post } from '../../domain/post.entity';
-import { PostRepo } from '../../persistence/post.repo';
+import { Injectable } from '@nestjs/common';
+import { Post } from '../domain/post.entity';
+import { PostRepo } from '../persistence/post.repo';
 
 /** @alias 게시글 작성 */
+@Injectable()
 export class WritePostUseCase {
   constructor(private readonly postRepo: PostRepo) {}
 

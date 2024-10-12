@@ -1,12 +1,25 @@
 import { Post } from '../domain/post.entity';
-import { FindPostDto } from './dto/find-one-post.dto';
+
+interface FindListPostFilter {}
+
+interface FindListPostOptions {}
+
+interface FindOnePostFilter {}
+
+interface FindOnePostOptions {}
 
 export abstract class PostRepo {
   abstract insert(post: Post): Promise<void>;
 
-  abstract find(dto: FindPostDto): Promise<Post[]>;
+  abstract findList(
+    filter?: FindListPostFilter,
+    options?: FindListPostOptions
+  ): Promise<Post[]>;
 
-  abstract findOne(dto: FindPostDto): Promise<Post | undefined>;
+  abstract findOne(
+    filter?: FindOnePostFilter,
+    options?: FindOnePostOptions
+  ): Promise<Post | undefined>;
 
   abstract update(post: Post): Promise<Post>;
 
